@@ -27,7 +27,7 @@ iii) change the 'servername' parameter value to "your server name" captured in p
 
 # Once the above setup is completed, follow below process to execute the project solution
 # Step1:
-1. Open neostatETL.sln solution and open AutomatedPipeline.dtsx package.
+1. Open neostatsETL.sln solution and open AutomatedPipeline.dtsx package.
 2. In the screen, in below pane, find connection managers pane -> open the connection "SQLDBConn". Click on Test Connection. Once succeeded, go to step 2.
 # Step2:
 1. In AutomatedPipeline.dtsx package, execute this package. Click on "Start" on top menu.
