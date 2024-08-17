@@ -26,11 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">NIDHI-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyT1OXvUy30SkSjphrn/JFAAAAAACAAAAAAAQZgAAAAEAACAAAACrsX9b8Ut12Iwku7nz+7xPwDLlXizvsRGtsXbe5nM1VwAAAAAOgAAAAAIAACAAAABjISlW2M7KIGpCeEK0s8KcJ2q9NY+9aeOGVC0NcTlbr5AAAACcmpf8153p9jvYCVsLfZCapFhiTnrP01MhwuYt8zv31fr3uqBCBHRpsPmzKGOqt6NlBey3nsPov9fXIQY83T9a5Axp9qFygrP7nWNN6GioSvjpimz8zKMpM2Jv6wrYqO7T8PpmKhhYln2ryyL1cUJj+sgNizsvpioRyBesUAVsr/ukjcCa/Y1CcWm1k9/nhgFAAAAAa0FnHFnJFTspWjGledRtxg5d1y9qIrSoGf5ZU3GwEc2kU3gCkYVzZ9/S/YmhdUVsLinTMGuu+LPIm7AXH0oZQw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyT1OXvUy30SkSjphrn/JFAAAAAACAAAAAAAQZgAAAAEAACAAAABNj80mQw0XsTEQLV5q3K8Ay+76k7jqlmf+co8bTdYCTAAAAAAOgAAAAAIAACAAAACSskxl66aG+tCOkqRZZjeSAJSahlipP4M2BzicM/cOmZAAAACJHw2Z7Ox9gFqZqxvpAX9HsOj/pDGNZghS21iVIpgdIzFRWct6NPLpahwyBr7MLeVJzXa2vu85jyevq4K1v8K8xtFCCd84wpPLb7zoW6C4Wwu/A6ItzBqjrP/vwH9OSudD9JJ1FSXGKOVRAbK3CNnzh1w/FK+5C8Hq+Yls40LBzQoD1TkbTjijQiJxb8BNqSVAAAAACWbHRcW4VQlivlOrIazEkcbzjDq5Dj6Mo/mBrXhF0aDBAp3makE7JWsl/06TtZq8iAQLf+7U35udHgyC9V5L/w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="LoadSalesDataToDB.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="CreateAllTablesAndSP.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="AutomatedPipeline.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SQLDBConn.conmgr" />
@@ -386,6 +388,40 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="CreateAllTablesAndSP.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{66A0314E-4C96-4899-814D-C67FC04D450A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">CreateAllTablesAndSP</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{13432248-06EB-4CBE-9AF7-4F932A0CC0C1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="AutomatedPipeline.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{DEF7097C-FBC3-4D9E-8CBD-5BFFBDD3A2EC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3C48EB60-7C37-4BFD-A37A-00634179808A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

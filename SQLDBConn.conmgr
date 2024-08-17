@@ -3,6 +3,10 @@
   DTS:ObjectName="SQLDBConn"
   DTS:DTSID="{DA07C08B-3CA8-4445-9403-EBC5B3165815}"
   DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[$Project::DBName]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::ServerName]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"

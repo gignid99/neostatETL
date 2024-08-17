@@ -26,11 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">NIDHI-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyT1OXvUy30SkSjphrn/JFAAAAAACAAAAAAAQZgAAAAEAACAAAAAG4HlhV5QUTE41Kta3WW5ZT5U8xevY0e8FnWy7jXGbJwAAAAAOgAAAAAIAACAAAADbYhjQMIb5+VhGiijTAv6YLaRAYongag5KYtdu9XREvpAAAAA6+bjikeHNArHl1h8QaV9qvWEbySJtpFHLfyJdLFsGyx8vA64+zuoFkJ7WrnHYRXJ8XLAyN197IQ4fiWDxwgDwhFXeaXH48C4AgyYEjBF/9pbKqaZlGKEKpYd+YJzZnlzUkj6gMh25r9iattrfZhuHcfmiuhzqeLG+GfiZmKJdxffgAIjWLrjXVtqM77rS+AZAAAAA1vQVDd+GPWjhrEIIdXeV0ZMDsEOv/TqmwPt9ii2Cgo5ffJGdOp5XyAfCmTOADANRU7FCt3RtYawI74zXl3B3sw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyT1OXvUy30SkSjphrn/JFAAAAAACAAAAAAAQZgAAAAEAACAAAAAI86MuVAdkm41QX3LAqnXSaD9w67x36C+J1fM1ATy4TQAAAAAOgAAAAAIAACAAAAB2p99CpiL/DeepIVbIiGU4IWYrriFRrUxAWU5jvXO1lpAAAADYyAlF7erwz2m90JumG+IwcJxCGeiWGEvIqNEvLTk5G2L/keifDkZoGUUq5F6KwWWHaV02xbtW117PHPenP2wnAPKb6CuSG8xQP7YjL1CFgELeMfzKiGU0Os2l0tdTHYKiim5Mdse4DjDEP7QWGvuHgxDyA9qsL8o43rDeWaYwyR/l4U992yozS1AC/rO+i/lAAAAAjsIBce2E9HUsvvNuZDFQ1kfxP3ccsL5aDFQ7FXG2BuSJmsAa5UQwr/9bojDDx7C/WvW6TVfOLs2x+oBsnuajfQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="LoadSalesDataToDB.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="CreateAllTablesAndSP.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="AutomatedPipeline.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SQLDBConn.conmgr" />
@@ -112,21 +114,6 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.SQLDBConn.InitialCatalog">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TestDB</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
             <SSIS:Parameter SSIS:Name="CM.SQLDBConn.Password">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
@@ -154,21 +141,6 @@
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.SQLDBConn.ServerName">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">localhost\SQLEXPRESS</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
             <SSIS:Parameter SSIS:Name="CM.SQLDBConn.UserName">
@@ -386,6 +358,40 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="CreateAllTablesAndSP.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{66A0314E-4C96-4899-814D-C67FC04D450A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">CreateAllTablesAndSP</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{13432248-06EB-4CBE-9AF7-4F932A0CC0C1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="AutomatedPipeline.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{DEF7097C-FBC3-4D9E-8CBD-5BFFBDD3A2EC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3C48EB60-7C37-4BFD-A37A-00634179808A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

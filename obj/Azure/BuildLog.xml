@@ -2,13 +2,23 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>Sample_Test</Name>
-    <LastWriteTime>2024-08-17T08:43:00.9202566Z</LastWriteTime>
+    <LastWriteTime>2024-08-17T14:11:33.1840434Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>LoadSalesDataToDB.dtsx</Name>
-      <LastWriteTime>2024-08-17T08:42:32.8792801Z</LastWriteTime>
+      <LastWriteTime>2024-08-17T08:44:32.3155944Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CreateAllTablesAndSP.dtsx</Name>
+      <LastWriteTime>2024-08-17T14:11:17.2955669Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>AutomatedPipeline.dtsx</Name>
+      <LastWriteTime>2024-08-17T14:06:26.6906715Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
