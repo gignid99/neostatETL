@@ -1,7 +1,7 @@
-# neostatETL
+# neostatsETL
 This is practice assessment from Neostat for XYZ company to load their sales data to SQL Server DB and gain insights from the data
 
-##Points to note before setting up the SSIS project:
+## Points to note before setting up the SSIS project:
 1. Download SQL Server Express edition and install the application. This will enable SQL Server Express instance in the system. Note down the Server name provided (A).
 2. Download visual studio
 3. Download SQL Server Integration Services, from the extensions of visual studio
