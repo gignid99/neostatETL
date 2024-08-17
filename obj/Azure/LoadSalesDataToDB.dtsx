@@ -11,161 +11,18 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="LoadSalesDataToDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{1137B55D-D484-46DF-B467-D86CB2A7B450}">
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{D95140D6-DE33-46B5-B200-BF4B315C1348}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Destination sink]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{D70B6026-CADF-434E-9422-745B69C33F04}"
-      DTS:ObjectName="Destination sink">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="16393"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x0022_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\chnid\OneDrive\Documents\src\Final_Sales_Data.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="orderID"
-              DTS:DTSID="{3C4D9362-4B16-47E7-8225-1026F71962FA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CustomerName"
-              DTS:DTSID="{E24B8404-968C-40DD-A2B9-BCA24CFAD667}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="PhoneNumber"
-              DTS:DTSID="{9D7110AF-77E3-44C8-8061-8F6D5ABC0908}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Location"
-              DTS:DTSID="{7FF7CF6A-FF18-4D70-81B1-9FA16A5BE8B6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Country"
-              DTS:DTSID="{90DFF9E5-88D6-434A-91BC-3C702104173D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="StoreCode"
-              DTS:DTSID="{81943496-BAC3-4C15-A488-1BC152463509}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Product"
-              DTS:DTSID="{0EF9C884-1889-4E41-80E6-C4392C31D623}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Quantity"
-              DTS:DTSID="{734C1D3C-81C7-41F8-A464-7F51A44BF534}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Price"
-              DTS:DTSID="{1A0763AB-BAED-4ECD-8C06-986809899D09}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Date"
-              DTS:DTSID="{30AFD2BA-082A-4A8B-8D67-79CFF0FD2B39}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ExpiryDate"
-              DTS:DTSID="{57AB9C30-DAF0-4632-8DCD-5FA1C8C18116}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TotalSales"
-              DTS:DTSID="{EF7FF312-4287-4569-B514-CF5F934413D0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="256"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EncryptedCreditCardNumber"
-              DTS:DTSID="{0B5C0CAF-7D46-4756-979C-854147EE04C5}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{16708FB6-3D25-4174-8E3F-2278871BFCB4}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\chnid\OneDrive\Documents\src\Final_Sales_Data.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{7FD57302-B86C-4368-B350-F7B924D0F789}"
       DTS:ObjectName="Flat File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::FilePath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -175,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\chnid\OneDrive\Documents\src\Sample_Data_Ingestion.csv">
+          DTS:ConnectionString="C:\Projects\DataProjects\SSISSample\neostatETL\src\Sample_Data_Ingestion.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1125,13 +982,17 @@
           Id="Package\Data Transformation"
           TopLeft="544.874975888059,105.394735745281" />
         <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Truncate Table"
-          TopLeft="51.2499977089465,101.29824562906" />
+          Size="220,42.6666666666667"
+          Id="Package\Load Clean Data to new table"
+          TopLeft="519.874978346751,213.394734888856" />
         <NodeLayout
           Size="206.666666666667,42.6666666666667"
           Id="Package\Load CSV to DB encrypted"
           TopLeft="286.249987203628,106.736840933314" />
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Truncate Table"
+          TopLeft="51.2499977089465,101.29824562906" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="203.249997708946,125.35087661452">
@@ -1176,10 +1037,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="220,42.6666666666667"
-          Id="Package\Load Clean Data to new table"
-          TopLeft="519.874978346751,213.394734888856" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="631.708310450739,148.061402411947">
