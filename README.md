@@ -35,3 +35,5 @@ iii) change the 'servername' parameter value to "your server name" captured in p
 ##### This package will create and setup all the required tables (Staging, Final and Lookup) in your database, in 1st step and in 2nd step, it will load the file from src folder to your database tables. LoadSalesData package is also executed as part of AutomatedPipeline package. So, we don't need to run any other steps. Once AutomatedPipeline is complete, go to Azure data studio or SSMS and do below:
 Run the query to check data in staging table - Select * from dbo.SalesData_Encrypted;
 Run the query to check data in final cleaned table - Select * from dbo.Final_Sales_Data;
+
+
